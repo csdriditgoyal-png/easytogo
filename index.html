@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelBooker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">✈ TravelBooker</div>
+</header>
+
+<section class="container">
+  <h2>Choose Your Package</h2>
+
+  <div class="packages">
+    <div class="card selected" data-name="Tropical Paradise" data-price="99999">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+      <h3>Tropical Paradise</h3>
+      <p>Pristine beaches with luxury resorts</p>
+      <span>📅 7 days</span>
+      <div class="price">
+        <span>From ₹99,999</span>
+        <button class="select-btn">Selected</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="Mountain Adventure" data-price="125000">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <h3>Mountain Adventure</h3>
+      <p>Thrilling mountain experiences</p>
+      <span>📅 10 days</span>
+      <div class="price">
+        <span>From ₹1,25,000</span>
+        <button class="select-btn">Select</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="City Explorer" data-price="75000">
+      <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000">
+      <h3>City Explorer</h3>
+      <p>Iconic landmarks and culture</p>
+      <span>📅 5 days</span>
+      <div class="price">
+        <span>From ₹75,000</span>
+        <button class="select-btn">Select</button>
+      </div>
+    </div>
+
+    <div class="card" data-name="Safari Expedition" data-price="200000">
+      <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2">
+      <h3>Safari Expedition</h3>
+      <p>Wildlife in natural habitat</p>
+      <span>📅 12 days</span>
+      <div class="price">
+        <span>From ₹2,00,000</span>
+        <button class="select-btn">Select</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking">
+  <div class="form">
+    <h3>Complete Booking</h3>
+
+    <label>Start Date</label>
+    <input type="date" id="startDate">
+
+    <label>Travelers</label>
+    <input type="number" id="travelers" value="1" min="1">
+
+    <label>Discount Code</label>
+    <div class="discount">
+      <input type="text" id="coupon" placeholder="e.g., SAVE10">
+      <button id="applyBtn">Apply</button>
+    </div>
+
+    <small>Try: SAVE10, SAVE20, WINTER25</small>
+  </div>
+
+  <div class="summary">
+    <h3>Price Summary</h3>
+    <p id="packageName"></p>
+    <p id="calc"></p>
+    <hr>
+    <p>Subtotal <span id="subtotal"></span></p>
+    <p class="total">Total <span id="total"></span></p>
+
+    <button class="confirm" id="confirmBtn">Confirm</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
